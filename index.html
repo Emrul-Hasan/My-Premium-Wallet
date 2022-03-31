@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wallet Banking</title>
+    <!-- Css style Sheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Brsotrap StyleSheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<h1 class="bg-gradient fw-bold text-center pt-2 pb-3 text-primary">MY PREMIUM WALLET</h1>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <section class="col-md-6 image">
+
+                <img src="image/money.jpg" alt="">
+
+            </section>
+
+            <section class="col-md-6 content d-flex justify-content-center align-items-center">
+                <!-- Income item -->
+                <div class="box ">
+                    <h2 class="text-center">Income</h2>
+                    <div>
+                        <table>
+                            <tr>
+                                <td class="fw-bold">
+                                    Income
+                                </td>
+                                <td>
+                                    <input id="income-input" class=" form-control my-2 mx-3 " type="text">
+                                    <span class="required fw-bold text-danger" style="display: none; ">Income
+                                        required</span>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <h2 class="text-center">Expenses</h2>
+                    <table>
+                        <tr>
+                            <td class="fw-bold">
+                                Food
+                            </td>
+                            <td>
+                                <input id="food-input" class="my-2 mx-3 form-control" type="text">
+                                <span class="required fw-bold text-danger" style="display: none;">Food is
+                                    required</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="fw-bold">
+                                Rent
+                            </td>
+                            <td>
+                                <input id="rent-input" class="my-2 mx-3 form-control" type="text">
+                                <span class="required fw-bold text-danger" style="display: none">Rent is required</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="fw-bold">
+                                Cloths
+                            </td>
+                            <td>
+                                <input id="cloths-input" class="my-2 mx-3 form-control" type="text">
+                                <span class="required fw-bold text-danger" style="display: none">Cloth is
+                                    required</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="text-center">
+                        <button id="calculate-btn" class="px-3 btn btn-outline-primary btn-sm">Calculate</button>
+                    </div>
+                    <!-- Invalid message show -->
+                    <div class="notify-section">
+                        <p id="notify-fail" class="notify">❌ Total Express can't greater than Income</p>
+                        <p id="notify-invalid" class="notify">❌ You can't input any negative number</p>
+                        <p id="notify-string" class="notify">❌ Only Number type input valid</p>
+
+                    </div>
+                    <!-- Expree and Balance show -->
+                    <div>
+
+                        <h4 class="text-center">Total Express :<span id="total-exprss">00</span></h4>
+                    </div>
+                    <div class="">
+                        <h4 class="text-center">Balance :<span id="total-balance">00</span></h4>
+                    </div>
+                    <!-- Saving Section -->
+                    <div>
+                        <strong>Save</strong>
+                        <input id="save-input" class="my-5 border-0 " type="text">
+                        <span>%</span>
+                        <button id="save-btn" class="px-3 btn btn-outline-primary btn-sm">Save</button>
+                    </div>
+                    <div class="notify-section">
+
+                        <p id="notify-invalidBalance" class="notify">❌ You can't savings money</p>
+                        <p id="notify-invalidSave" class="notify">❌ You can't input any empty</p>
+
+                    </div>
+                    <!-- Saving And Remaining balance Show -->
+                    <div>
+                        <h4 class="text-center">Saving Amount: <span id="saving-amount">00</span></h4>
+                    </div>
+                    <div>
+                        <h4 class="text-center">Remaining Balance: <span id="remaing-balance">00</span></h4>
+                    </div>
+
+                </div>
+
+
+            </section>
+        </div>
+
+    </div>
+
+    </div>
+    <!-- Brostrap Script  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
